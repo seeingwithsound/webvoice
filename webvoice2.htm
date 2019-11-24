@@ -1,0 +1,251 @@
+<!-- All rights are reserved. Reproduction in whole or in part is   -->
+<!-- prohibited without the written consent of the copyright owner. -->
+<HTML><!-- saved from url=(0031)http://www.seeingwithsound.com/ -->
+<HEAD>
+<META NAME="description" CONTENT="Usage notes for The vOICe Web App.">
+<META NAME="keywords" CONTENT="WebRTC, HTML5">
+<LINK REL=STYLESHEET HREF="../head.css">
+<SCRIPT LANGUAGE="JavaScript" SRC="../head.js"></SCRIPT> 
+<TITLE>Usage notes</TITLE>
+<style><!--a:active{color:7f007f} a:hover{color:ff0000}--></style>
+</HEAD>
+<!--<BODY BGCOLOR="#000000" TEXT="#ffffff" LINK="#ffff00" VLINK="#ffff00" ALINK="#ff0000">-->
+<BODY BGCOLOR="#FFFFFF" BACKGROUND="bgvoice.gif" TEXT="#000000" LINK="#0000ff" VLINK="#7f007f" ALINK="#ff0000">
+<font face="Arial,Helvetica">
+
+<Center><H1>Usage notes</H1></Center>
+
+&#171; <A HREF="webvoice.htm">The vOICe Web App</A><BR>
+&#171; <A HREF="../index.html" TARGET="_top">The vOICe Home Page</A><P>
+
+<Center>
+<table width=70% cellpadding=0 cellspacing=0 border=0><tr><td>
+
+<!--
+<b><font color="#ff0000">Notice overriding what is documented below: WebRTC support currently appears broken (for some cameras) with Firefox 54 on Windows and Android, and for Chrome on Android. The vOICe Web App used to work in earlier versions of these browsers. The latest versions of Chrome, Opera and Microsoft Edge on Windows still work fine.</font></b><P>
+-->
+
+<b><A HREF="webvoice.htm">The vOICe Web App</A> turns live camera views into corresponding
+soundscapes. It is an HTML5 web app that runs inside your browser, for use on any device or 
+platform including Android, iOS, Windows and Linux. It could therefore also be called a 
+universal app, and it implements general visual-to-auditory sensory substitution for the 
+totally blind. It requires a browser with WebRTC support, such as Firefox, Google Chrome 
+or Microsoft Edge, or Safari on Apple devices. The vOICe Web App is a so-called progressive
+web app (PWA), such that it can even be started and used when offline, and can be installed
+and run as a home screen app with suitable browsers. This web page offers usage notes and 
+describes accessibility issues for blind users.</b><P>
+
+<center><table width=90% cellpadding=7 cellspacing=0 bgcolor="#ffffbf" style="border: 1px solid black" border=0 bordercolor="#0000ff">
+<tr><td><font face="Arial,Helvetica" color="#000000" size=-1><xb>
+<table align=right hspace=5 vspace=0><tr><td><A HREF="../phone/ColorCross.png"><IMG SRC="ColorCross_s.png" ALIGN=RIGHT VSPACE=5 HSPACE=5 ALT="Google Cardboard compatible HMD and fish-eye lens" WIDTH=105 HEIGHT=67 BORDER=1></A></td></tr></table>
+For learning to see through The vOICe sensory substitution visit the 
+<A HREF="../manual/The_vOICe_Training_Manual.htm">training</A> page, which is aimed at 
+use of head-mounted devices. When running The vOICe Web App on a smartphone, you can
+make use of Google Cardboard type of headsets with a head strap for a cheap, hands-free 
+and immersive wearable setup. Normally sighted or low vision users can combine this
+with the "large view" and "VR" (virtual reality side-by-side) settings for an immersive
+visual view. Moreover, they can toggle simulation of severe cataracts (severe blur of
+only the visual view) by clicking/tapping the live video.<BR>
+</xb></font></td></tr></table></center><P>
+
+At startup, seconds after loading The vOICe Web App web page, a popup dialog may
+appear that asks for your permission to access the camera. The dialog may disappear 
+if you accidentally click outside this dialog or move focus to another window, and 
+then it returns only after reloading The vOICe Web App web page. 
+To access the popup in Firefox for Windows, press Alt-S, followed by the Tab and Enter 
+key to grant access to the camera. Alternatively, you can repeatedly press F6 until
+the dialog gets focus, and then Tab around. In Google Chrome for Windows, after pressing
+the Enter key for the URL of The vOICe Web App in the browser address bar, 
+press the Tab and Enter key to grant access to the camera.<P>
+
+Bandwidth requirements in running The vOICe Web App are extremely low, because almost 
+all processing including soundscape generation is done locally in your browser and 
+not "in the cloud", such that communication overhead is negligible. In fact you can
+disconnect your Internet connection after starting The vOICe Web App and it will 
+continue to sound live camera images. Moreover, by virtue of being a progressive web app,
+you can even use The vOICe Web App as an offline app in places where you have no 
+Internet connection.<P>
+
+The vOICe Web App has been tested or reported to run on Windows in at least Firefox, 
+Google Chrome, Opera and Microsoft Edge, on Android in at least Firefox, Chrome and 
+Opera, on iOS in at least Safari, on ubuntu Linux in at least Firefox, on Raspbian 
+(Raspberry Pi) in IceWeasel (a Firefox port), and on OS X (MacBook Pro) in Google Chrome.
+The vOICe Web App has even been shown to run in the Helio browser on the Magic Leap One
+augmented reality glasses.<BR>
+
+<A NAME="share_screen">&#160;</A><BR>
+<b role="navigation">How to consult a remote sighted guide</b><P>
+If you want a sighted person to give verbal feedback on your live camera view, and 
+provided that your platform supports Skype, you can after installing 
+<IMG SRC="xlink.gif" ALIGN=ABSMIDDLE ALT="" WIDTH=11 HEIGHT=11 BORDER=0>&#160;<A HREF="https://www.skype.com" TARGET="thevoice" REL="nofollow">Skype</A> and making a Skype connection to this sighted person 
+activate Skype's 
+<IMG SRC="xlink.gif" ALIGN=ABSMIDDLE ALT="" WIDTH=11 HEIGHT=11 BORDER=0>&#160;<A HREF="https://support.skype.com/en/faq/FA34895/screen-sharing-in-skype" TARGET="thevoice" REL="nofollow">screen sharing</A>
+option before starting The vOICe web app. This should let the sighted person see 
+The vOICe web app window with the live camera view and let him or her talk with 
+you about what is showing in the live camera view. Screen sharing provides a good 
+workaround for the fact that only one app at a time can access the camera.<P>
+
+<b>Known issues</b><P>
+
+<u><em>Web app updates</em></u>:
+A new version of The vOICe Web App may not immediately show up in your browser after 
+you open its web page. This is due to caching mechanisms where a web app gets updated
+in the background while running. After visiting its web page, close and open your browser,
+or the tab that the web app is running in, and visit the web page again. Then you should
+have the latest version.<P>
+
+<u><em>Visual scanline</em></u>:
+If the soundscapes appear choppy, it may help to uncheck the scanline checkbox, in 
+order to maximize performance and minimize audible artifacts. The scanline is automatically
+turned off when the fast scan rate is selected.<P>
+
+<u><em>Apple iPhone and iPad</em></u>:
+The vOICe Web App requires iOS 11 or later. Moreover, it will appear muted until you
+press the Play button in the The vOICe Web App. This is needed because Apple WebKit 
+requires user interaction before starting video with sound. In case you still get no 
+sound after pressing the Play button, check if you need to grant permission to use 
+and "unmute" the camera via a camera button near the top of the screen. To prevent a
+screen timeout you may also wish to temporarily set your screen lock (Auto-Lock) time
+to "Never" in your device Settings | Display &amp; Brightness.<P>
+
+Although The vOICe Web App is designed to work as a progressive web app (PWA), iOS 11 
+does not yet support camera access in home screen web apps. It is not known if or when
+Apple will fix this. You must therefore load The vOICe Web App in Safari. It does not 
+work as a stand-alone home screen web app under iOS.<P>
+
+Turn off Low Power Mode if it is on: The vOICe Web App may not work if your iOS device
+is in Low Power Mode.<P>
+
+<!--
+<u><em>Google Chrome</em></u>:
+As of Chrome version 71 (December 2018) you will have to press a Play button just as 
+with Apple Safari. This too is a consequence of a policy change that requires user 
+interaction in order to get sound.<P>
+-->
+<!-- No longer applicable? -->
+<!--
+An upcoming problem is that Google Chrome will in the near future refuse camera access 
+from non-https web pages, apparently for security reasons. The secure (https) version of
+The vOICe Web App at <A HREF="https://www.seeingwithsound.com/webvoice.htm">https://www.seeingwithsound.com/webvoice.htm</A>
+should not be affected. 
+-->
+
+<!--
+<u><em>Chrome for Android</em></u>: With Chrome for Android you may need to explicitly
+enable access to the camera via Settings | Apps | Chrome | Permissions | Camera ON.<P>
+-->
+<!-- No longer applicable? -->
+
+<!--
+<u><em>Firefox for Android</em></u>: With Firefox for Android you must have autoplay 
+enabled via Settings | Advanced | Media | Allow autoplay. This unintuitive requirement
+should be fixed as of Firefox 60.<P>
+-->
+<!-- https://bugzilla.mozilla.org/show_bug.cgi?id=1182329 --> 
+
+<!--
+In case The vOICe Web App does not work for you right away: with Chrome (Opera) for Android,
+you may need to enable "Disable gesture requirement for media playback" in 
+<A HREF="chrome://flags">chrome://flags</A> (<A HREF="opera://flags">opera://flags</A>).
+With Google Chrome for Windows you may also need to enable the "Enable experimental Web 
+Platform features" option in chrome://flags. 
+-->
+
+If The vOICe Web App then still does not work, you may need to install and use Firefox 
+Nightly or Chrome Canary.<P>
+
+<u><em>"This site can't be reached"</em></u>: In rare circumstances, The vOICe web app
+can get corrupted during installation, for instance due to a server glitch, resulting 
+in the aforementioned message popping up repeatedly even after any server problems are
+long gone. The remedy is then to uninstall and re-install The vOICe web app.<P>
+
+<u><em>Flashlight</em></u>:
+Some browsers support toggling a camera's flashlight (torch) on and off. If so, 
+The vOICe web app will display a "torch" button. However, even if the browser supports it, 
+the camera need not, in which case use of the torch button will have no effect.<P>
+
+<u><em>Video recording</em></u>:
+The video recording feature toggled by the "record" button is highly experimental, 
+because it depends on browser support that is still rather immature. In particular, 
+video and audio in the resulting vOICe*.webm video files may be poorly synchronized. 
+You can open .webm files in your browser for playback. A UNIX-style timestamp number
+is automatically added to the filenames, and you can visit the 
+<A HREF="/timestamp.html" TITLE="Convert timestamp back to date and time">timestamp</A> 
+web page to extract a human-readable date and time from the filename. Video recording
+is only intended for taking short video clips of up to a minute or so, or else the
+browser may run out of memory. Upon stopping the recording, you may either get a file
+requester for saving the video file or you may find the video file already saved in
+your browser's download folder. This depends on browser security settings and policies.
+Video recording is not currently supported by the Microsoft Edge browser nor by the
+Apple Safari browser, and the "record" button will remain hidden in these browsers.<P>
+
+<b>License restrictions</b><P>
+You may freely and without cost apply The vOICe Web App for personal or academic use. 
+You will not charge a fee or request donations for The vOICe Web App, nor distribute 
+or include The vOICe Web App in or with commercial products, nor modify or reverse 
+engineer The vOICe Web App. You will not use The vOICe Web App for commercial 
+purposes.
+
+<P><A NAME="dis_claim"></A>
+<font size=1><b>
+
+<!--
+<table align=right><tr><td><center>
+<A HREF="http://www.download3k.com/Antivirus-Report-The-vOICe-Android.html" xHREF="download3k.gif" TARGET="thevoice" REL="nofollow"><img src="download3k.gif" width=170 height=116 xalign=right hspace=10 xvspace=5 alt="Download3K Antivirus Report" border=0></A><BR>
+<A HREF="donate.htm"><IMG SRC="donatevima.gif" ALT="Make a donation - thanks!" HSPACE=10 VSPACE=5 WIDTH=122 HEIGHT=31 BORDER=0 xALIGN=RIGHT></A>
+</center></td></tr></table>
+-->
+
+Disclaimer: THIS PRODUCT (The vOICe Web App) IS PROVIDED AS IS WITHOUT ANY WARRANTY 
+OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, PETER B.L. MEIJER FURTHER 
+DISCLAIMS ALL WARRANTIES, INCLUDING WITHOUT LIMITATION ANY IMPLIED OR STATED 
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. 
+THE ENTIRE RISK ARISING OUT OF THE USE OR PERFORMANCE OF THIS PRODUCT AND DOCUMENTATION 
+REMAINS WITH RECIPIENT. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT 
+SHALL PETER B.L. MEIJER OR HIS SUPPLIERS BE LIABLE FOR ANY CONSEQUENTIAL, INCIDENTAL, 
+DIRECT, INDIRECT, SPECIAL, PUNITIVE, RECURSIVE, OR OTHER DAMAGES WHATSOEVER (INCLUDING, 
+WITHOUT LIMITATION, DAMAGES FOR LOSS OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF 
+BUSINESS INFORMATION, PERSONAL INJURY, DISRUPTION OF FAMILY LIFE, OR OTHER PECUNIARY LOSS) 
+ARISING OUT OF THIS AGREEMENT OR THE USE OF OR INABILITY TO USE THE PRODUCT, EVEN IF 
+PETER B.L. MEIJER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. BECAUSE 
+SOME STATES/JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF LIABILITY FOR 
+CONSEQUENTIAL OR INCIDENTAL DAMAGES, THE ABOVE LIMITATION MAY NOT APPLY TO THE RECIPIENT.
+LET IT BE KNOWN THAT THE USER OF THIS PROGRAM HAS PAID PETER B.L. MEIJER THE SUM TOTAL 
+OF $0.00 FOR THE USE OF THIS PROGRAM. ANY DAMAGES AWARDED SHALL NOT BE IN EXCESS OF 
+SAID AMOUNT.
+<P>
+
+Supplemental information associated with disclaimer:<P>
+
+Concerning privacy of the observed: The vOICe Web App by default (i.e. in normal use)
+does not store or transmit any video or snapshots; it converts live video frames to sound
+and next discards both the video data and the generated sound data.
+
+The vOICe Web App is intended for educational uses, while its effectiveness
+or benefit has not been independently demonstrated and formally validated. It is not
+intended to diagnose, treat, cure, or prevent any disease or condition. It does not
+replace long cane and/or guide dog. Depending on national law and regulations, usage of 
+The vOICe technology may be subject to approval by an institutional review board. Also,
+as with any audio-based system, permanent hearing loss may result when sounds are played
+at high volume (> 80 dB, OSHA) for prolonged periods of time, while environmental sounds 
+can be partially masked even at a modest volume.
+Also note that this is still a research project, while the software may contain bugs, so 
+there has to be a <A HREF="#dis_claim">disclaimer</A> with respect to any damages or harm 
+that use of this educational software might cause through inappropriate use, just like you 
+shouldn't attempt to dry your cat in the microwave oven. Never rely on The vOICe for your 
+safety. Getting professional rehabilitation support, including adequate O&amp;M training 
+support for mobile orientation and mobility use, is considered extremely important when 
+moving beyond mere educational uses, but even with that, 100% safety can never be guaranteed.
+Finally, some of the third-party product information may prove inaccurate, incomplete 
+or outdated as it reflects a best effort to describe selected developments in a complex 
+and highly dynamic market where adequate and reliable documentation is often missing or 
+hard to track down.
+</b></font><BR>
+
+</td></tr></table>
+</Center>
+
+<P><div onClick="location.href='../contact.htm';"><H6>Copyright &copy; 1996 - 2019 Peter B.L. Meijer<BR></H6></div>
+</font>
+<SCRIPT LANGUAGE="JavaScript" SRC="../ga.js"></SCRIPT>
+</BODY></HTML>
