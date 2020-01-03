@@ -6,7 +6,7 @@ a:visited { color: #ffff00; }
 a:active { color: #ff0000; }
 
 video { position:absolute; visibility:hidden; }
-canvas { border:1px solid #ffffff; width:176px; height:144px; }
+canvas { border:1px solid #ffffff; width:176; height:144; }
 .buttonwrapper {
    margin-top: 2px;
    display: inline-grid;
