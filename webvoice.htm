@@ -70,6 +70,8 @@ if ('serviceWorker' in navigator) {
 <a href="webvoice.htm?hl=en" title="English">en</a> 
 | <a href="webvoice.htm?hl=ru" title="русский">ru</a> 
 | <a href="webvoice.htm?hl=cn" title="中国">cn</a>
+| <a href="webvoice.htm?hl=jp" title="日本人">jp</a>
+&nbsp;
 </font></div>
 
 <SCRIPT>
@@ -82,8 +84,10 @@ if (navigator.userLanguage) hl = navigator.userLanguage.toLowerCase().substr(0,2
 else if (navigator.language) hl = navigator.language.toLowerCase().substr(0,2); // NS
 var xcy = (hl == "ru" || hl == "uk");
 var xcn = (hl == "cn");
+var xjp = (hl == "jp");
 if (rc(".ru/") || rc(".ua/") || rc(".su/") || rc(".kz/") || rc(".by/") || rc(".az/") || rc(".bg/") || rc(".kg/")) xcy = true;
 if (rc(".cn/")) xcn = true;
+if (rc(".jp/")) xjp = true;
 function getQueryString(name, url) {
    if (!url) url = window.location.href;
    name = name.replace(/[\[\]]/g, '\\$&');
@@ -96,10 +100,13 @@ hl = getQueryString("hl");
 if (hl != null) { 
    xcy = (hl == "ru" || hl == "uk");
    xcn = (hl == "cn");
+   xjp = (hl == "jp");
 }
 vr = getQueryString("vr"); 
 var qvr = (vr != null);
 //xcy = true;
+//xcn = true;
+//xjp = true;
 if (xcy) document.write(
 "<Center><H1>The vOICe для веб</H1></Center>"+
 "<Center><H3>сенсорного замещения<BR>"+
@@ -107,6 +114,9 @@ if (xcy) document.write(
 else if (xcn) document.write(
 "<Center><H1>The vOICe 网络应用</H1></Center>"+
 "<Center><H1>用你的耳朵看！</H1></Center>");
+else if (xjp) document.write(
+"<Center><H1>The vOICe ェブアプリ</H1></Center>"+
+"<Center><H1>耳で見て！</H1></Center>");
 else document.write(
 "<Center><H1>The vOICe web app</H1></Center>"+
 "<Center><H3>sensory substitution app<BR>"+
@@ -163,6 +173,7 @@ document.write("<script src='"+location.href.substring(location.href.lastIndexOf
 document.write("<script src='"+location.href.substring(location.href.lastIndexOf("/")+1,location.href.lastIndexOf(".")+1)+"js'><\/script>");
 if (xcy) document.write("<P>The vOICe веб приложение для слепых</P>");
 else if (xcn) document.write("<P>盲的人提供增强现实</P>");
+else if (xjp) document.write("<P>視覚障害者のための拡張現実</P>");
 else document.write("<P>The vOICe web app for the totally blind<BR>requires browser with WebRTC support</P>");
 // -->
 </SCRIPT>
@@ -175,6 +186,7 @@ else document.write("<P>The vOICe web app for the totally blind<BR>requires brow
 <!--
 if (xcy) document.write("<P><A HREF='webvoice2.htm'>заметки</A> (en)&#160;&#160;|&#160; <A HREF='../index.html' TARGET='_top'>The vOICe главная</A></P>");
 else if (xcn) document.write("<P><A HREF='webvoice2.htm'>使用说明</A> (en)&#160;&#160;|&#160; <A HREF='../index.html' TARGET='_top'>The vOICe 主页</A></P>");
+else if (xjp) document.write("<P><A HREF='webvoice2.htm'>ノート</A> (en)&#160;&#160;|&#160; <A HREF='../index.html' TARGET='_top'>The vOICe </A></P>");
 else document.write("<P><A HREF='webvoice2.htm'>usage notes</A>&#160;&#160;|&#160; <A HREF='../index.html' TARGET='_top'>The vOICe homepage</A></P>");
 // Deal with race condition for div creation vs cacheVersion assignment (differs for Firefox and Chrome)
 document.write("<font size=1 color=#7f7f7f><span id='versionSpan'>version</span> <div id='cacheDiv' style='display: inline-block'> <span id='unknownSpan'>"+(cacheVersion?cacheVersion.substring(0,cacheVersion.indexOf('.')+3):"unknown")+"</span></div></font>");

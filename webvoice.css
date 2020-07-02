@@ -11,13 +11,14 @@ canvas { border:1px solid #ffffff; width:176; height:144; }
    margin-top: 2px;
    display: inline-grid;
    grid-template-columns: fit-content(100%) fit-content(100%);
-   grid-gap: 5px;
+   grid-gap: 4px;
 }
 button {
    border:none;
    display:block;
-   width:80px;
-   padding:4px 8px;
+   width:87px;
+   font-size-adjust: 1.0;
+   padding:4px 4px;
    margin:0 auto 0;
    cursor:pointer;
    color:#ffffff;
