@@ -73,12 +73,34 @@ Opera, on iOS in at least Safari, on ubuntu Linux in at least Firefox, on Raspbi
 The vOICe Web App has even been shown to run in the Helio browser on the Magic Leap One
 augmented reality glasses.<BR>
 
+<A NAME="url_query">&#160;</A><BR>
+<b role="navigation">Optional URL query parameters</b><P>
+The vOICe web app supports several query parameters that be appended to the app URL 
+in order to automatically set a special operating mode at startup. Some of these
+modes mostly target sighted users, by simulating forms of blindness on the visual 
+display while maintaining the full soundscape. The URL format is to first append 
+a question mark '?' followed by one or more query parameters separated by ampersands
+'&'. For example,<P>
+
+<xmp>   https://www.seeingwithsound.com/webvoice/webvoice.htm?hemianopia&vr&hl=ru</xmp><P>
+ 
+applies the (left field) hemianopia simulator, in VR mode, with a Russian interface.
+Supported query parameters include "hl=ru" (without the double quotes) to set the 
+host language to Russian, and "hl=en", "hl=cn", "hl=jp" for English, Chinese and 
+Japanese, respectively; "hemianopia" or "hemianopiaL" activates a left hemifield 
+hemianopia simulator, and "hemianopiaR" activates a right hemifield hemianopia 
+simulator; "cataracts" activates a severe cataracts simulator, "large" sets a 
+maximized view, and "vr" sets a maximized virtual reality view with separate 
+left eye and right eye pane for use with a virtual reality headset. Note that you 
+may need to toggle the "large" checkbox off and on manually for a truly full-screen
+view, because most browsers require user interaction to enable full-screen viewing.<BR>
+
 <A NAME="share_screen">&#160;</A><BR>
 <b role="navigation">How to consult a remote sighted guide</b><P>
 If you want a sighted person to give verbal feedback on your live camera view, and 
 provided that your platform supports Skype, you can after installing 
-<IMG SRC="xlink.gif" ALIGN=ABSMIDDLE ALT="" WIDTH=11 HEIGHT=11 BORDER=0>&#160;<A HREF="https://www.skype.com" TARGET="thevoice" REL="nofollow">Skype</A> and making a Skype connection to this sighted person 
-activate Skype's 
+<IMG SRC="xlink.gif" ALIGN=ABSMIDDLE ALT="" WIDTH=11 HEIGHT=11 BORDER=0>&#160;<A HREF="https://www.skype.com" TARGET="thevoice" REL="nofollow">Skype</A>
+and making a Skype connection to this sighted person activate Skype's 
 <IMG SRC="xlink.gif" ALIGN=ABSMIDDLE ALT="" WIDTH=11 HEIGHT=11 BORDER=0>&#160;<A HREF="https://support.skype.com/en/faq/FA34895/screen-sharing-in-skype" TARGET="thevoice" REL="nofollow">screen sharing</A>
 option before starting The vOICe web app. This should let the sighted person see 
 The vOICe web app window with the live camera view and let him or her talk with 

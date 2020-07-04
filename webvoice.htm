@@ -102,8 +102,11 @@ if (hl != null) {
    xcn = (hl == "cn");
    xjp = (hl == "jp");
 }
-vr = getQueryString("vr"); 
-var qvr = (vr != null);
+var qvr          = (getQueryString("vr") != null);
+var qlarge       = (getQueryString("large") != null);
+var qcataracts   = (getQueryString("cataracts") != null);
+var qhemianopiaL = (getQueryString("hemianopia") != null || getQueryString("hemianopiaL") != null);
+var qhemianopiaR = (getQueryString("hemianopiaR") != null);
 //xcy = true;
 //xcn = true;
 //xjp = true;
