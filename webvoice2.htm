@@ -2,10 +2,13 @@
 <!-- prohibited without the written consent of the copyright owner. -->
 <HTML><!-- saved from url=(0031)http://www.seeingwithsound.com/ -->
 <HEAD>
-<META NAME="description" CONTENT="Usage notes for The vOICe Web App.">
+<META NAME="description" CONTENT="Usage notes for The vOICe web app.">
 <META NAME="keywords" CONTENT="WebRTC, HTML5">
+<META HTTP-EQUIV=Content-Type CONTENT="text/html; CHARSET=UTF-8" />
+<!--
 <LINK REL=STYLESHEET HREF="../head.css">
-<SCRIPT LANGUAGE="JavaScript" SRC="../head.js"></SCRIPT> 
+<SCRIPT LANGUAGE="JavaScript" SRC="../head.js"></SCRIPT>
+-->
 <TITLE>Usage notes</TITLE>
 <style><!--a:active{color:7f007f} a:hover{color:ff0000}--></style>
 </HEAD>
@@ -15,22 +18,22 @@
 
 <Center><H1>Usage notes</H1></Center>
 
-&#171; <A HREF="webvoice.htm">The vOICe Web App</A><BR>
+&#171; <A HREF="webvoice.htm">The vOICe web app</A><BR>
 &#171; <A HREF="../index.html" TARGET="_top">The vOICe Home Page</A><P>
 
 <Center>
 <table width=70% cellpadding=0 cellspacing=0 border=0><tr><td>
 
 <!--
-<b><font color="#ff0000">Notice overriding what is documented below: WebRTC support currently appears broken (for some cameras) with Firefox 54 on Windows and Android, and for Chrome on Android. The vOICe Web App used to work in earlier versions of these browsers. The latest versions of Chrome, Opera and Microsoft Edge on Windows still work fine.</font></b><P>
+<b><font color="#ff0000">Notice overriding what is documented below: WebRTC support currently appears broken (for some cameras) with Firefox 54 on Windows and Android, and for Chrome on Android. The vOICe web app used to work in earlier versions of these browsers. The latest versions of Chrome, Opera and Microsoft Edge on Windows still work fine.</font></b><P>
 -->
 
-<b><A HREF="webvoice.htm">The vOICe Web App</A> turns live camera views into corresponding
+<b><A HREF="webvoice.htm">The vOICe web app</A> turns live camera views into corresponding
 soundscapes. It is an HTML5 web app that runs inside your browser, for use on any device or 
 platform including Android, iOS, Windows and Linux. It could therefore also be called a 
 universal app, and it implements general visual-to-auditory sensory substitution for the 
 totally blind. It requires a browser with WebRTC support, such as Firefox, Google Chrome 
-or Microsoft Edge, or Safari on Apple devices. The vOICe Web App is a so-called progressive
+or Microsoft Edge, or Safari on Apple devices. The vOICe web app is a so-called progressive
 web app (PWA), such that it can even be started and used when offline, and can be installed
 and run as a home screen app with suitable browsers. This web page offers usage notes and 
 describes accessibility issues for blind users.</b><P>
@@ -40,37 +43,41 @@ describes accessibility issues for blind users.</b><P>
 <table align=right hspace=5 vspace=0><tr><td><A HREF="../phone/ColorCross.png"><IMG SRC="ColorCross_s.png" ALIGN=RIGHT VSPACE=5 HSPACE=5 ALT="Google Cardboard compatible HMD and fish-eye lens" WIDTH=105 HEIGHT=67 BORDER=1></A></td></tr></table>
 For learning to see through The vOICe sensory substitution visit the 
 <A HREF="../manual/The_vOICe_Training_Manual.htm">training</A> page, which is aimed at 
-use of head-mounted devices. When running The vOICe Web App on a smartphone, you can
+use of head-mounted devices. When running The vOICe web app on a smartphone, you can
 make use of Google Cardboard type of headsets with a head strap for a cheap, hands-free 
-and immersive wearable setup. Normally sighted or low vision users can combine this
-with the "large view" and "VR" (virtual reality side-by-side) settings for an immersive
+and immersive wearable setup. Normally sighted or low vision users can combine this with
+the "large" and "VR" (virtual reality side-by-side) checkbox settings for an immersive
 visual view. Moreover, they can toggle simulation of severe cataracts (severe blur of
-only the visual view) by clicking/tapping the live video.<BR>
+only the visual view) by clicking/tapping at the center of the live video area on the 
+screen. Furthermore, clicking or tapping the left (right) quarter of this area toggles 
+a left (right) hemifield hemianopia simulation. The soundscapes are not affected, such 
+that sighted users will <em>hear</em> more visual detail than they can see with their 
+eyes in areas blinded by simulated cataracts or homonymous hemianopia.<BR>
 </xb></font></td></tr></table></center><P>
 
-At startup, seconds after loading The vOICe Web App web page, a popup dialog may
+At startup, seconds after loading The vOICe web app web page, a popup dialog may
 appear that asks for your permission to access the camera. The dialog may disappear 
 if you accidentally click outside this dialog or move focus to another window, and 
-then it returns only after reloading The vOICe Web App web page. 
+then it returns only after reloading The vOICe web app web page. 
 To access the popup in Firefox for Windows, press Alt-S, followed by the Tab and Enter 
 key to grant access to the camera. Alternatively, you can repeatedly press F6 until
 the dialog gets focus, and then Tab around. In Google Chrome for Windows, after pressing
-the Enter key for the URL of The vOICe Web App in the browser address bar, 
+the Enter key for the URL of The vOICe web app in the browser address bar, 
 press the Tab and Enter key to grant access to the camera.<P>
 
-Bandwidth requirements in running The vOICe Web App are extremely low, because almost 
+Bandwidth requirements in running The vOICe web app are extremely low, because almost 
 all processing including soundscape generation is done locally in your browser and 
 not "in the cloud", such that communication overhead is negligible. In fact you can
-disconnect your Internet connection after starting The vOICe Web App and it will 
+disconnect your Internet connection after starting The vOICe web app and it will 
 continue to sound live camera images. Moreover, by virtue of being a progressive web app,
-you can even use The vOICe Web App as an offline app in places where you have no 
+you can even use The vOICe web app as an offline app in places where you have no 
 Internet connection.<P>
 
-The vOICe Web App has been tested or reported to run on Windows in at least Firefox, 
+The vOICe web app has been tested or reported to run on Windows in at least Firefox, 
 Google Chrome, Opera and Microsoft Edge, on Android in at least Firefox, Chrome and 
 Opera, on iOS in at least Safari, on ubuntu Linux in at least Firefox, on Raspbian 
 (Raspberry Pi) in IceWeasel (a Firefox port), and on OS X (MacBook Pro) in Google Chrome.
-The vOICe Web App has even been shown to run in the Helio browser on the Magic Leap One
+The vOICe web app has even been shown to run in the Helio browser on the Magic Leap One
 augmented reality glasses.<BR>
 
 <A NAME="url_query">&#160;</A><BR>
@@ -93,7 +100,13 @@ simulator; "cataracts" activates a severe cataracts simulator, "large" sets a
 maximized view, and "vr" sets a maximized virtual reality view with separate 
 left eye and right eye pane for use with a virtual reality headset. Note that you 
 may need to toggle the "large" checkbox off and on manually for a truly full-screen
-view, because most browsers require user interaction to enable full-screen viewing.<BR>
+view, because most browsers require user interaction to enable full-screen viewing.
+In case you have multiple cameras, it is also possible to select another camera
+at startup using query parameters like "camera=1" or "camera=2" (the default camera 
+being "camera=0"). Other query parameters are "mute", "edges", "negative", "zoom"
+and "mono".<BR> 
+<!-- "torch" implemented but does not seem to work as query parameter, and 
+as a button it also seems to work only with Chrome, and on the way out -->
 
 <A NAME="share_screen">&#160;</A><BR>
 <b role="navigation">How to consult a remote sighted guide</b><P>
@@ -110,11 +123,15 @@ workaround for the fact that only one app at a time can access the camera.<P>
 <b>Known issues</b><P>
 
 <u><em>Web app updates</em></u>:
-A new version of The vOICe Web App may not immediately show up in your browser after 
+A new version of The vOICe web app may not immediately show up in your browser after 
 you open its web page. This is due to caching mechanisms where a web app gets updated
 in the background while running. After visiting its web page, close and open your browser,
 or the tab that the web app is running in, and visit the web page again. Then you should
-have the latest version.<P>
+have the latest version. Some browsers such as Google Chrome need an extra nudge to
+update upon request: for Chrome for Android visit chrome://webapks and press the Update
+button, if present, or try visiting chrome://restart, or else it may take 
+<IMG SRC="xlink.gif" ALIGN=ABSMIDDLE ALT="" WIDTH=11 HEIGHT=11 BORDER=0>&#160;<A HREF="https://web.dev/manifest-updates/" TARGET="thevoice" REL="nofollow">many days</A>
+before Chrome checks for a new version.<P>
 
 <u><em>Visual scanline</em></u>:
 If the soundscapes appear choppy, it may help to uncheck the scanline checkbox, in 
@@ -122,20 +139,20 @@ order to maximize performance and minimize audible artifacts. The scanline is au
 turned off when the fast scan rate is selected.<P>
 
 <u><em>Apple iPhone and iPad</em></u>:
-The vOICe Web App requires iOS 11 or later. Moreover, it will appear muted until you
-press the Play button in the The vOICe Web App. This is needed because Apple WebKit 
+The vOICe web app requires iOS 11 or later. Moreover, it will appear muted until you
+press the Play button in the The vOICe web app. This is needed because Apple WebKit 
 requires user interaction before starting video with sound. In case you still get no 
 sound after pressing the Play button, check if you need to grant permission to use 
 and "unmute" the camera via a camera button near the top of the screen. To prevent a
 screen timeout you may also wish to temporarily set your screen lock (Auto-Lock) time
 to "Never" in your device Settings | Display &amp; Brightness.<P>
 
-Although The vOICe Web App is designed to work as a progressive web app (PWA), iOS 11 
+Although The vOICe web app is designed to work as a progressive web app (PWA), iOS 11 
 does not yet support camera access in home screen web apps. It is not known if or when
-Apple will fix this. You must therefore load The vOICe Web App in Safari. It does not 
+Apple will fix this. You must therefore load The vOICe web app in Safari. It does not 
 work as a stand-alone home screen web app under iOS.<P>
 
-Turn off Low Power Mode if it is on: The vOICe Web App may not work if your iOS device
+Turn off Low Power Mode if it is on: The vOICe web app may not work if your iOS device
 is in Low Power Mode.<P>
 
 <!--
@@ -148,7 +165,7 @@ interaction in order to get sound.<P>
 <!--
 An upcoming problem is that Google Chrome will in the near future refuse camera access 
 from non-https web pages, apparently for security reasons. The secure (https) version of
-The vOICe Web App at <A HREF="https://www.seeingwithsound.com/webvoice.htm">https://www.seeingwithsound.com/webvoice.htm</A>
+The vOICe web app at <A HREF="https://www.seeingwithsound.com/webvoice.htm">https://www.seeingwithsound.com/webvoice.htm</A>
 should not be affected. 
 -->
 
@@ -166,15 +183,18 @@ should be fixed as of Firefox 60.<P>
 <!-- https://bugzilla.mozilla.org/show_bug.cgi?id=1182329 --> 
 
 <!--
-In case The vOICe Web App does not work for you right away: with Chrome (Opera) for Android,
+In case The vOICe web app does not work for you right away: with Chrome (Opera) for Android,
 you may need to enable "Disable gesture requirement for media playback" in 
 <A HREF="chrome://flags">chrome://flags</A> (<A HREF="opera://flags">opera://flags</A>).
 With Google Chrome for Windows you may also need to enable the "Enable experimental Web 
 Platform features" option in chrome://flags. 
 -->
 
-If The vOICe Web App then still does not work, you may need to install and use Firefox 
+If The vOICe web app then still does not work, you may need to install and use Firefox 
 Nightly or Chrome Canary.<P>
+
+<u><em>Oculus Quest and Rift</em></u>: The vOICe web app does not work on these devices,
+because Oculus does not support access to individual camera frames.<P>
 
 <u><em>"This site can't be reached"</em></u>: In rare circumstances, The vOICe web app
 can get corrupted during installation, for instance due to a server glitch, resulting 
@@ -202,10 +222,10 @@ Video recording is not currently supported by the Microsoft Edge browser nor by 
 Apple Safari browser, and the "record" button will remain hidden in these browsers.<P>
 
 <b>License restrictions</b><P>
-You may freely and without cost apply The vOICe Web App for personal or academic use. 
-You will not charge a fee or request donations for The vOICe Web App, nor distribute 
-or include The vOICe Web App in or with commercial products, nor modify or reverse 
-engineer The vOICe Web App. You will not use The vOICe Web App for commercial 
+You may freely and without cost apply The vOICe web app for personal or academic use. 
+You will not charge a fee or request donations for The vOICe web app, nor distribute 
+or include The vOICe web app in or with commercial products, nor modify or reverse 
+engineer The vOICe web app. You will not use The vOICe web app for commercial 
 purposes.
 
 <P><A NAME="dis_claim"></A>
@@ -218,7 +238,7 @@ purposes.
 </center></td></tr></table>
 -->
 
-Disclaimer: THIS PRODUCT (The vOICe Web App) IS PROVIDED AS IS WITHOUT ANY WARRANTY 
+Disclaimer: THIS PRODUCT (The vOICe web app) IS PROVIDED AS IS WITHOUT ANY WARRANTY 
 OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, PETER B.L. MEIJER FURTHER 
 DISCLAIMS ALL WARRANTIES, INCLUDING WITHOUT LIMITATION ANY IMPLIED OR STATED 
 WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. 
@@ -239,11 +259,11 @@ SAID AMOUNT.
 
 Supplemental information associated with disclaimer:<P>
 
-Concerning privacy of the observed: The vOICe Web App by default (i.e. in normal use)
+Concerning privacy of the observed: The vOICe web app by default (i.e. in normal use)
 does not store or transmit any video or snapshots; it converts live video frames to sound
 and next discards both the video data and the generated sound data.
 
-The vOICe Web App is intended for educational uses, while its effectiveness
+The vOICe web app is intended for educational uses, while its effectiveness
 or benefit has not been independently demonstrated and formally validated. It is not
 intended to diagnose, treat, cure, or prevent any disease or condition. It does not
 replace long cane and/or guide dog. Depending on national law and regulations, usage of 
@@ -267,7 +287,7 @@ hard to track down.
 </td></tr></table>
 </Center>
 
-<P><div onClick="location.href='../contact.htm';"><H6>Copyright &copy; 1996 - 2020 Peter B.L. Meijer<BR></H6></div>
+<P><div onClick="location.href='../contact.htm';"><H6>Copyright &copy; 1996 - 2022 Peter B.L. Meijer<BR></H6></div>
 </font>
-<SCRIPT LANGUAGE="JavaScript" SRC="../ga.js"></SCRIPT>
+<!--<SCRIPT LANGUAGE="JavaScript" SRC="../ga.js"></SCRIPT>-->
 </BODY></HTML>
