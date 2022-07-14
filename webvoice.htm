@@ -1,6 +1,6 @@
 <!-- All rights are reserved. Reproduction in whole or in part is   -->
 <!-- prohibited without the written consent of the copyright owner. -->
-<!-- (C) P.B.L. Meijer 2015 - 2021 -->
+<!-- (C) P.B.L. Meijer 2015 - 2022 -->
 <!DOCTYPE HTML>
 <HTML>
 <HEAD>
@@ -92,6 +92,7 @@ if ('serviceWorker' in navigator) {
 | <a href="webvoice.htm?hl=ru" title="русский">ru</a>
 | <a href="webvoice.htm?hl=cn" title="中国">cn</a>
 | <a href="webvoice.htm?hl=jp" title="日本人">jp</a>
+| <a href="webvoice.htm?hl=de" title="Deutsch">de</a>
 | <a href="webvoice.htm?hl=nl" title="Nederlands">nl</a>
 &nbsp;
 </font></div>
@@ -108,11 +109,13 @@ var xcy = (hl == "ru" || hl == "uk");
 var xcn = (hl == "cn");
 var xjp = (hl == "jp");
 var xfr = (hl == "fr");
+var xde = (hl == "de" || hl == "at" || hl == "ch");
 var xnl = (hl == "nl");
 if (rc(".ru/") || rc(".ua/") || rc(".su/") || rc(".kz/") || rc(".by/") || rc(".az/") || rc(".bg/") || rc(".kg/")) xcy = true;
 if (rc(".cn/")) xcn = true;
 if (rc(".jp/")) xjp = true;
 if (rc(".fr/")) xfr = true;
+if (rc(".de/")) xde = true;
 if (rc(".nl/")) xnl = true;
 function getQueryString(name, url) {
    if (!url) url = window.location.href;
@@ -128,6 +131,7 @@ if (hl != null) {
    xcn = (hl == "cn");
    xjp = (hl == "jp");
    xfr = (hl == "fr");
+   xde = (hl == "de");
    xnl = (hl == "nl");
 }
 var qvr          = (getQueryString("vr") != null);
@@ -145,10 +149,16 @@ var qcamera      = 0;
 var cam = getQueryString("camera");
 if (cam != null) qcamera = parseInt(cam);
 if (qcamera < 0) qcamera = 0;
+var qvolume = 100;
+var vol = getQueryString("volume");
+if (vol != null) qvolume = parseInt(vol);
+if (qvolume < 0) qvolume = 0;
+if (qvolume > 100) qvolume = 100;
 //xcy = true;
 //xcn = true;
 //xjp = true;
 //xfr = true;
+//xde = true;
 //xnl = true;
 if (xcy) document.write(
 "<Center><H1>The vOICe для веб</H1></Center>"+
@@ -162,7 +172,11 @@ else if (xjp) document.write(
 "<Center><H1>耳で見て！</H1></Center>");
 else if (xfr) document.write(
 "<Center><H1>The vOICe sur Web</H1></Center>"+
-"<Center><H3>« voir avec vos oreilles! »</H3></Center>");
+"<Center><H3>« voir avec vos oreilles »</H3></Center>");
+else if (xde) document.write(
+"<Center><H1>The vOICe Web-App</H1></Center>"+
+"<Center><H3>Sensorische Substitution<BR>"+
+"Sehen mit ihren Ohren</H3></Center>");
 else if (xnl) document.write(
 "<Center><H1>The vOICe web app</H1></Center>"+
 "<Center><H3>sensorische substitutie app<BR>"+
@@ -212,6 +226,8 @@ runs inside your browser</H3></Center><P>
 <button id="gxReset" accesskey="r">reset</button>
 <button id="gxRecord" accesskey="q">record</button>
 </div>
+<div hidden accesskey="+" onclick="qvolume=(qvolume<90?qvolume+10:100);document.getElementById('gxStatus').innerHTML='<P>&#128266; '+qvolume+'</P>'"></div>
+<div hidden accesskey="-" onclick="qvolume=(qvolume>10?qvolume-10:10);document.getElementById('gxStatus').innerHTML='<P>&#128266; '+qvolume+'</P>'"></div>
 <div id="gxStatus"></div>
 
 <SCRIPT>
@@ -228,6 +244,7 @@ if (xcy) document.write("<P>The vOICe веб приложение для сле�
 else if (xcn) document.write("<P>盲的人提供增强现实</P>");
 else if (xjp) document.write("<P>視覚障害者のための拡張現実</P>");
 else if (xfr) document.write("<P>vision fonctionnelle pour les aveugles</P>");
+else if (xde) document.write("<P>Funktionelles Sehen für Vollblinde</P>");
 else if (xnl) document.write("<P>functioneel zien voor totaal-blinden</P>");
 else document.write("<P>functional vision for the totally blind</P>");  // <BR>requires browser with WebRTC support
 // -->
@@ -239,10 +256,11 @@ else document.write("<P>functional vision for the totally blind</P>");  // <BR>r
 
 <SCRIPT>
 <!--
-if (xcy) document.write("<P><A HREF='webvoice2.htm'>заметки</A> (en)&#160;&#160;|&#160; <A HREF='../index.html' TARGET='_top'>The vOICe главная</A></P>");
+if (xcy) document.write("<P><A HREF='webvoice2.htm'>заметки</A> (Ан)&#160;&#160;|&#160; <A HREF='../index.html' TARGET='_top'>The vOICe главная</A></P>");
 else if (xcn) document.write("<P><A HREF='webvoice2.htm'>使用说明</A> (en)&#160;&#160;|&#160; <A HREF='../index.html' TARGET='_top'>The vOICe 主页</A></P>");
 else if (xjp) document.write("<P><A HREF='webvoice2.htm'>ノート</A> (en)&#160;&#160;|&#160; <A HREF='../index.html' TARGET='_top'>The vOICe</A></P>");
-else if (xfr) document.write("<P><A HREF='webvoice2.htm'>notes d'utilisation</A> (en)&#160;&#160;|&#160; <A HREF='../index.html' TARGET='_top'>The vOICe</A></P>");
+else if (xfr) document.write("<P><A HREF='webvoice2.htm'>notes d'utilisation</A> (An)&#160;&#160;|&#160; <A HREF='../index.html' TARGET='_top'>The vOICe</A></P>");
+else if (xde) document.write("<P><A HREF='webvoice2.htm'>Gebrauch</A> (En)&#160;&#160;|&#160; <A HREF='../index.html' TARGET='_top'>The vOICe Startseite</A></P>");
 else if (xnl) document.write("<P><A HREF='webvoice2.htm'>over gebruik</A> (en)&#160;&#160;|&#160; <A HREF='../index.html' TARGET='_top'>The vOICe startpagina</A></P>");
 else document.write("<P><A HREF='webvoice2.htm'>usage notes</A>&#160;&#160;|&#160; <A HREF='../index.html' TARGET='_top'>The vOICe homepage</A></P>");
 // Deal with race condition for div creation vs cacheVersion assignment (differs for Firefox and Chrome)

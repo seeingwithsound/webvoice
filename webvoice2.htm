@@ -103,10 +103,31 @@ may need to toggle the "large" checkbox off and on manually for a truly full-scr
 view, because most browsers require user interaction to enable full-screen viewing.
 In case you have multiple cameras, it is also possible to select another camera
 at startup using query parameters like "camera=1" or "camera=2" (the default camera 
-being "camera=0"). Other query parameters are "mute", "edges", "negative", "zoom"
-and "mono".<BR> 
+being "camera=0"). Other query parameters are "mute", "edges", "negative", "zoom",
+"mono" and "volume". The "volume" query parameter sets the audio volume for soundscapes
+and speech through an integer in the range between 0 and 100 (default is 100).
+For example,<P>
+
+<xmp>   https://www.seeingwithsound.com/webvoice/webvoice.htm?volume=25</xmp>
 <!-- "torch" implemented but does not seem to work as query parameter, and 
 as a button it also seems to work only with Chrome, and on the way out -->
+
+<A NAME="kb_shortcuts">&#160;</A><BR>
+<b role="navigation">Keyboard shortcuts</b><P>
+<!-- https://stackoverflow.com/questions/20826548/getting-the-key-combination-of-accesskeys-in-a-browser -->
+Depending on your browser and platform, keyboard shortcuts may be available for some
+common functions. In Google Chrome you'd press the Alt key in combination with the
+shortcut key, while in Firefox or Microsoft Edge you'd press Alt+Shift in combination 
+with the shortcut key. For example, Alt+m toggles mute in Chrome while Alt+Shift+m 
+does the same in Firefox and Edge.
+<span hidden accesskey="m" onclick="alert('Shortcut key \'m\' pressed')"></span>
+<script>
+var akl = document.querySelector('span').accessKeyLabel;
+if (akl) document.write("(In your current browser it would be "+akl+".)");
+</script>
+In this manner there are shortcut keys 'm' for pressing the mute button, 'e' for edges, 
+'n' for negative, 'z' for zoom, 's' for mono, 't' for torch, 'r' for reset, and 'q' for 
+the record button, as well as '+' for volume up and '-' for volume down.<BR>
 
 <A NAME="share_screen">&#160;</A><BR>
 <b role="navigation">How to consult a remote sighted guide</b><P>
@@ -132,6 +153,16 @@ update upon request: for Chrome for Android visit chrome://webapks and press the
 button, if present, or try visiting chrome://restart, or else it may take 
 <IMG SRC="xlink.gif" ALIGN=ABSMIDDLE ALT="" WIDTH=11 HEIGHT=11 BORDER=0>&#160;<A HREF="https://web.dev/manifest-updates/" TARGET="thevoice" REL="nofollow">many days</A>
 before Chrome checks for a new version.<P>
+
+<u><em>Display auto-rotate, screen rotation lock</em></u>: On devices such as phones 
+and tablets that can be used in multiple orientations like portrait and landscape, 
+make sure that in the device Settings for the display you have the auto-rotate option 
+turned <em>on</em>, such that the camera view is always scanned from left to right. 
+The feature goes under different names, and for instance on the iPhone or iPad it is 
+known as the "screen rotation lock", which in that case needs to be turned <em>off</em>.
+This is particularly important when you start making your phone head-mounted in a 
+VR headset for hands-free immersive use, because then your phone will be in landscape 
+orientation and the web app should follow that orientation.<p>
 
 <u><em>Visual scanline</em></u>:
 If the soundscapes appear choppy, it may help to uncheck the scanline checkbox, in 
