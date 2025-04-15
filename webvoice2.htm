@@ -1,6 +1,6 @@
 <!-- All rights are reserved. Reproduction in whole or in part is   -->
 <!-- prohibited without the written consent of the copyright owner. -->
-<HTML><!-- saved from url=(0031)http://www.seeingwithsound.com/ -->
+<HTML><!-- saved from url=(0031)https://www.seeingwithsound.com/ -->
 <HEAD>
 <META NAME="description" CONTENT="Usage notes for The vOICe web app.">
 <META NAME="keywords" CONTENT="WebRTC, HTML5">
@@ -22,13 +22,17 @@
 &#171; <A HREF="../index.html" TARGET="_top">The vOICe Home Page</A><P>
 
 <Center>
+<IMG SRC="qrcode.png" ALIGN=RIGHT VSPACE=0 HSPACE=10 ALT="QR code for The vOICe web app" WIDTH=128 HEIGHT=128 BORDER=0>
+<!-- https://www.seeingwithsound.com/webvoice/webvoice.htm -->
 <table width=70% cellpadding=0 cellspacing=0 border=0><tr><td>
 
 <!--
 <b><font color="#ff0000">Notice overriding what is documented below: WebRTC support currently appears broken (for some cameras) with Firefox 54 on Windows and Android, and for Chrome on Android. The vOICe web app used to work in earlier versions of these browsers. The latest versions of Chrome, Opera and Microsoft Edge on Windows still work fine.</font></b><P>
 -->
 
-<b><A HREF="webvoice.htm">The vOICe web app</A> turns live camera views into corresponding
+<b>Use stereo headphones for best results! You'll perceive better sound quality and intuitive left-to-right stereo panning.<P>
+
+<A HREF="webvoice.htm">The vOICe web app</A> turns live camera views into corresponding
 soundscapes. It is an HTML5 web app that runs inside your browser, for use on any device or 
 platform including Android, iOS, Windows and Linux. It could therefore also be called a 
 universal app, and it implements general visual-to-auditory sensory substitution for the 
@@ -104,13 +108,26 @@ view, because most browsers require user interaction to enable full-screen viewi
 In case you have multiple cameras, it is also possible to select another camera
 at startup using query parameters like "camera=1" or "camera=2" (the default camera 
 being "camera=0"). Other query parameters are "mute", "edges", "negative", "zoom",
-"mono" and "volume". The "volume" query parameter sets the audio volume for soundscapes
-and speech through an integer in the range between 0 and 100 (default is 100).
+"mono", "volume" and "viewport". The "volume" query parameter sets the audio volume 
+for soundscapes and speech through an integer in the range between 0 and 100 (default is 100).
 For example,<P>
 
-<xmp>   https://www.seeingwithsound.com/webvoice/webvoice.htm?volume=25</xmp>
+<xmp>   https://www.seeingwithsound.com/webvoice/webvoice.htm?volume=25</xmp><P>
 <!-- "torch" implemented but does not seem to work as query parameter, and 
 as a button it also seems to work only with Chrome, and on the way out -->
+
+Especially in VR mode when using a large smartphone in a VR headset, the landscape width 
+of your smartphone screen may be too wide for your eyes to adjust to binocular viewing, 
+because human eyes can converge but usually not diverge. If your VR headset lacks
+adequate adjustment options, you can set the horizontal viewport of The vOICe web app
+to a percentage value between 10 and 100 (default is 100). For example, you can set it
+to 70% of the maximum width using<P>
+
+<xmp>   https://www.seeingwithsound.com/webvoice/webvoice.htm?vr&viewport=70</xmp><P>
+
+This downscales the horizontal view and adds black borders to the left and right side.
+You may need to experiment a bit to find which value best matches your smartphone screen
+size, VR headset, and your interpupillary distance (the distance between your eyes).<P>
 
 <A NAME="kb_shortcuts">&#160;</A><BR>
 <b role="navigation">Keyboard shortcuts</b><P>
@@ -170,13 +187,17 @@ order to maximize performance and minimize audible artifacts. The scanline is au
 turned off when the fast scan rate is selected.<P>
 
 <u><em>Apple iPhone and iPad</em></u>:
-The vOICe web app requires iOS 11 or later. Moreover, it will appear muted until you
-press the Play button in the The vOICe web app. This is needed because Apple WebKit 
-requires user interaction before starting video with sound. In case you still get no 
-sound after pressing the Play button, check if you need to grant permission to use 
-and "unmute" the camera via a camera button near the top of the screen. To prevent a
-screen timeout you may also wish to temporarily set your screen lock (Auto-Lock) time
-to "Never" in your device Settings | Display &amp; Brightness.<P>
+The vOICe web app requires iOS 11 or later. Moreover, it may appear muted until you
+press the Play button in the The vOICe web app, or press "Allow" in a popup reading
+"seeingwithsound.com would like to access the camera". This is needed because Apple 
+WebKit requires user interaction before starting video with sound. In case you still 
+get no sound, check if you need to grant permission elsewhere. To avoid that you have
+to grant permission for camera access upon every run or refresh of The vOICe web app,
+go to the Safari address bar, "Website Settings", "Camera", and select "Allow" instead
+of "Ask". To prevent a screen timeout you may also wish to temporarily set your screen 
+lock (Auto-Lock) time to "Never" in your device Settings | Display &amp; Brightness.
+This "Never" option may be missing on managed devices (MDM - Mobile Device Management).<P>
+<!-- https://discussions.apple.com/thread/252823019 -->
 
 Although The vOICe web app is designed to work as a progressive web app (PWA), iOS 11 
 does not yet support camera access in home screen web apps. It is not known if or when
@@ -224,8 +245,10 @@ Platform features" option in chrome://flags.
 If The vOICe web app then still does not work, you may need to install and use Firefox 
 Nightly or Chrome Canary.<P>
 
-<u><em>Oculus Quest and Rift</em></u>: The vOICe web app does not work on these devices,
-because Oculus does not support access to individual camera frames.<P>
+<u><em>Apple Vision Pro, Meta Quest 3, Meta Quest 2, Oculus Quest and Rift</em></u>: 
+The vOICe web app unfortunately does not work on these devices because they do not support 
+(i.e. allow) pixel-level access to individual camera frames, often in the name of privacy, 
+thereby also preventing use by computer vision applications for blind accessibility purposes.<P>
 
 <u><em>"This site can't be reached"</em></u>: In rare circumstances, The vOICe web app
 can get corrupted during installation, for instance due to a server glitch, resulting 
@@ -318,7 +341,7 @@ hard to track down.
 </td></tr></table>
 </Center>
 
-<P><div onClick="location.href='../contact.htm';"><H6>Copyright &copy; 1996 - 2022 Peter B.L. Meijer<BR></H6></div>
+<P><div onClick="location.href='../contact.htm';"><H6>Copyright &copy; 1996 - 2025 Peter B.L. Meijer<BR></H6></div>
 </font>
 <!--<SCRIPT LANGUAGE="JavaScript" SRC="../ga.js"></SCRIPT>-->
 </BODY></HTML>

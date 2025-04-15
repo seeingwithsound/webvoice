@@ -1,6 +1,6 @@
 <!-- All rights are reserved. Reproduction in whole or in part is   -->
 <!-- prohibited without the written consent of the copyright owner. -->
-<!-- (C) P.B.L. Meijer 2015 - 2022 -->
+<!-- (C) P.B.L. Meijer 2015 - 2024 -->
 <!DOCTYPE HTML>
 <HTML>
 <HEAD>
@@ -33,7 +33,7 @@ document.write("<LINK HREF='"+location.href.substring(location.href.lastIndexOf(
 // getcss.innerHTML = "<LINK HREF='"+location.href.substring(location.href.lastIndexOf("/")+1,location.href.lastIndexOf(".")+1)+"css' REL='stylesheet' TYPE='text/css'/>";
 // document.head.appendChild(getcss);
 var cacheVersion = null;
-var viewdigits = 2;  // 2
+var viewdigits = 4;  // 2
 //navigator.storage.estimate().then(function(info) { 
 //console.log(info.quota);
 //console.log(info.usage);
@@ -154,6 +154,11 @@ var vol = getQueryString("volume");
 if (vol != null) qvolume = parseInt(vol);
 if (qvolume < 0) qvolume = 0;
 if (qvolume > 100) qvolume = 100;
+var qviewport = 100;
+var vp = getQueryString("viewport");
+if (vp != null) qviewport = parseInt(vp);
+if (qviewport < 10) qviewport = 10;
+if (qviewport > 100) qviewport = 100;
 //xcy = true;
 //xcn = true;
 //xjp = true;
@@ -209,7 +214,7 @@ runs inside your browser</H3></Center><P>
 <label><input type="checkbox" id="gxVR"/>VR</label>
 </font></form>
 <table width=176 cellpadding=0 cellspacing=0 border=0><tr><td><Center>
-<div class="select" id="gxSource"><font size=-1><label for="videoSourceID">video source: </label></font><select id="videoSourceID"></select></div>
+<div class="select" id="gxSource"><font size=-1><label id="gxSourceLabel" for="videoSourceID">video source: </label></font><select id="videoSourceID"></select></div>
 <div class="select" id="gxScanRate"><font size=-1><label for="scanRateID">scan rate: </label></font><select id="scanRateID"></select></div>
 <div id="gxArea" STYLE="z-index:0;">
 <video id="gxVideo" playsinline autoplay></video><!-- Chrome on Android needs autoplay -->
