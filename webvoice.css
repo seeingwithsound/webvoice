@@ -7,7 +7,7 @@ a:active { color: #ff0000; }
 
 video { position:absolute; visibility:hidden; }
 canvas { border:1px solid #ffffff; width:176; height:144; }
-buttonwrapper {
+.buttonwrapper {
    margin-top: 2px;
    display: inline-grid;
    grid-template-columns: fit-content(100%) fit-content(100%);
