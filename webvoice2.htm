@@ -108,9 +108,9 @@ view, because most browsers require user interaction to enable full-screen viewi
 In case you have multiple cameras, it is also possible to select another camera
 at startup using query parameters like "camera=1" or "camera=2" (the default camera 
 being "camera=0"). Other query parameters are "mute", "edges", "negative", "zoom",
-"mono", "volume" and "viewport". The "volume" query parameter sets the audio volume 
-for soundscapes and speech through an integer in the range between 0 and 100 (default is 100).
-For example,<P>
+"mono", "volume", "viewport" and "preview". The "volume" query parameter sets the 
+audio volume for soundscapes and speech through an integer in the range between 
+0 and 100 (default is 100). For example,<P>
 
 <xmp>   https://www.seeingwithsound.com/webvoice/webvoice.htm?volume=25</xmp><P>
 <!-- "torch" implemented but does not seem to work as query parameter, and 
@@ -129,6 +129,18 @@ This downscales the horizontal view and adds black borders to the left and right
 You may need to experiment a bit to find which value best matches your smartphone screen
 size, VR headset, and your interpupillary distance (the distance between your eyes).<P>
 
+In view of the rapid development of AI-based scene description in combination with screen
+readers for the blind, it may in the future become possible to have AI models such as
+Google Gemini verbally describe the live camera view content while at the same time
+hearing the "raw vision" content from The vOICe web app. For example, you can use
+the "preview" query parameter as in
+
+<xmp>   https://www.seeingwithsound.com/webvoice/webvoice.htm?large&preview</xmp><P>
+
+to show a higher quality color preview on the screen for interpretation and description 
+by an AI model (once supported) while at the same time hearing The vOICe soundscapes. 
+This startup preview mode is turned off by clicking or tapping the camera view.<BR>
+
 <A NAME="kb_shortcuts">&#160;</A><BR>
 <b role="navigation">Keyboard shortcuts</b><P>
 <!-- https://stackoverflow.com/questions/20826548/getting-the-key-combination-of-accesskeys-in-a-browser -->
@@ -143,16 +155,16 @@ var akl = document.querySelector('span').accessKeyLabel;
 if (akl) document.write("(In your current browser it would be "+akl+".)");
 </script>
 In this manner there are shortcut keys 'm' for pressing the mute button, 'e' for edges, 
-'n' for negative, 'z' for zoom, 's' for mono, 't' for torch, 'r' for reset, and 'q' for 
-the record button, as well as '+' for volume up and '-' for volume down.<BR>
+'n' for negative, 'z' for zoom, 's' for mono, 't' for torch, 'r' for reset, 'p' for
+preview, and 'q' for the record button, as well as '+' for volume up and '-' for volume down.<BR>
 
 <A NAME="share_screen">&#160;</A><BR>
 <b role="navigation">How to consult a remote sighted guide</b><P>
 If you want a sighted person to give verbal feedback on your live camera view, and 
-provided that your platform supports Skype, you can after installing 
-<IMG SRC="xlink.gif" ALIGN=ABSMIDDLE ALT="" WIDTH=11 HEIGHT=11 BORDER=0>&#160;<A HREF="https://www.skype.com" TARGET="thevoice" REL="nofollow">Skype</A>
-and making a Skype connection to this sighted person activate Skype's 
-<IMG SRC="xlink.gif" ALIGN=ABSMIDDLE ALT="" WIDTH=11 HEIGHT=11 BORDER=0>&#160;<A HREF="https://support.skype.com/en/faq/FA34895/screen-sharing-in-skype" TARGET="thevoice" REL="nofollow">screen sharing</A>
+provided that your platform supports it, you may after installing a video conferencing
+app such as Microsoft Teams
+<!--<IMG SRC="xlink.gif" ALIGN=ABSMIDDLE ALT="" WIDTH=11 HEIGHT=11 BORDER=0>&#160;<A HREF="https://www.skype.com" TARGET="thevoice" REL="nofollow">Skype</A>-->
+and making a connection to this sighted person activate the app's screen sharing
 option before starting The vOICe web app. This should let the sighted person see 
 The vOICe web app window with the live camera view and let him or her talk with 
 you about what is showing in the live camera view. Screen sharing provides a good 

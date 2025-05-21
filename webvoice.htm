@@ -137,6 +137,7 @@ if (hl != null) {
 var qvr          = (getQueryString("vr") != null);
 var qlarge       = (getQueryString("large") != null);
 var qmute        = (getQueryString("mute") != null);
+var qpreview     = (getQueryString("preview") != null);
 var qedges       = (getQueryString("edges") != null);
 var qnegative    = (getQueryString("negative") != null);
 var qzoom        = (getQueryString("zoom") != null);
@@ -234,6 +235,7 @@ runs inside your browser</H3></Center><P>
 <div hidden accesskey="+" onclick="qvolume=(qvolume<90?qvolume+10:100);document.getElementById('gxStatus').innerHTML='<P>&#128266; '+qvolume+'</P>'"></div>
 <div hidden accesskey="-" onclick="qvolume=(qvolume>10?qvolume-10:10);document.getElementById('gxStatus').innerHTML='<P>&#128266; '+qvolume+'</P>'"></div>
 <div id="gxStatus"></div>
+<div hidden accesskey="p" onclick="qpreview=!qpreview"></div>
 
 <SCRIPT>
 <!--
