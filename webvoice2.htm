@@ -93,16 +93,21 @@ display while maintaining the full soundscape. The URL format is to first append
 a question mark '?' followed by one or more query parameters separated by ampersands
 '&'. For example,<P>
 
+<xmp>   https://www.seeingwithsound.com/webvoice/webvoice.htm?large</xmp><P>
+
+sets a maximized screen view, while
+ 
 <xmp>   https://www.seeingwithsound.com/webvoice/webvoice.htm?hemianopia&vr&hl=ru</xmp><P>
  
 applies the (left field) hemianopia simulator, in VR mode, with a Russian interface.
 Supported query parameters include "hl=ru" (without the double quotes) to set the 
-host language to Russian, and "hl=en", "hl=cn", "hl=jp" for English, Chinese and 
-Japanese, respectively; "hemianopia" or "hemianopiaL" activates a left hemifield 
+host language to Russian, and "hl=en", "hl=fr", "hl=cn", "hl=jp", "hl=de", "hl=nl" 
+for English, French, Chinese, Japanese, German and Dutch, respectively. 
+The "hemianopia" or "hemianopiaL" query parameter activates a left hemifield 
 hemianopia simulator, and "hemianopiaR" activates a right hemifield hemianopia 
-simulator; "cataracts" activates a severe cataracts simulator, "large" sets a 
-maximized view, and "vr" sets a maximized virtual reality view with separate 
-left eye and right eye pane for use with a virtual reality headset. Note that you 
+simulator. The "cataracts" query parameter activates a severe cataracts simulator, 
+and "vr" sets a maximized virtual reality view with separate left eye and right eye 
+pane for use with a virtual reality headset. Note that you 
 may need to toggle the "large" checkbox off and on manually for a truly full-screen
 view, because most browsers require user interaction to enable full-screen viewing.
 In case you have multiple cameras, it is also possible to select another camera
@@ -135,11 +140,20 @@ Google Gemini verbally describe the live camera view content while at the same t
 hearing the "raw vision" content from The vOICe web app. For example, you can use
 the "preview" query parameter as in
 
-<xmp>   https://www.seeingwithsound.com/webvoice/webvoice.htm?large&preview</xmp><P>
+<xmp>   https://www.seeingwithsound.com/webvoice/webvoice.htm?preview</xmp><P>
 
-to show a higher quality color preview on the screen for interpretation and description 
-by an AI model (once supported) while at the same time hearing The vOICe soundscapes. 
-This startup preview mode is turned off by clicking or tapping the camera view.<BR>
+which behaves very similarly to the "large" query parameter, but instead of a coarse
+large grayscale view it shows a higher resolution large color preview on the screen 
+for interpretation and description by an AI model (once supported) while at the same 
+time hearing The vOICe soundscapes. 
+This preview mode can be turned off by clicking or tapping the camera view, but it
+can also be toggled by using the "AI" checkbox. The main reason for having this "AI"
+checkbox alternative is that stand-alone installed web apps cannot read URL query 
+parameters because there is no address bar, but they can respond to checkboxes.
+Despite the "AI" name of the checkbox it performs no AI function of its own but 
+merely offers a higher quality view for better interpretation by external AI models.<P>
+
+Beware that query parameters are case sensitive.<BR>
 
 <A NAME="kb_shortcuts">&#160;</A><BR>
 <b role="navigation">Keyboard shortcuts</b><P>
