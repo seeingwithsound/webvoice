@@ -132,26 +132,34 @@ to 70% of the maximum width using<P>
 
 This downscales the horizontal view and adds black borders to the left and right side.
 You may need to experiment a bit to find which value best matches your smartphone screen
-size, VR headset, and your interpupillary distance (the distance between your eyes).<P>
+size, VR headset, and your interpupillary distance (the distance between your eyes).<BR>
 
-In view of the rapid development of AI-based scene description in combination with screen
-readers for the blind, it may in the future become possible to have AI models such as
-Google Gemini verbally describe the live camera view content while at the same time
-hearing the "raw vision" content from The vOICe web app. For example, you can use
-the "preview" query parameter as in
+<A NAME="preview_AI">&#160;</A><BR>
+Thanks to the rapid development of AI-based scene description it is now possible to 
+have AI models such as Google Gemini Live or ChatGPT verbally describe the visual
+content of the camera view as displayed by The vOICe web app on your device screen, 
+while at the same time hearing the "raw vision" soundscapes of the live camera view 
+from The vOICe web app. For example, you can switch The vOICe web app into an 
+AI compatibility mode by using the "preview" query parameter as in
 
 <xmp>   https://www.seeingwithsound.com/webvoice/webvoice.htm?preview</xmp><P>
 
-which behaves very similarly to the "large" query parameter, but instead of a coarse
+which behaves very similar to the "large" query parameter, but instead of a coarse
 large grayscale view it shows a higher resolution large color preview on the screen 
-for interpretation and description by an AI model (once supported) while at the same 
-time hearing The vOICe soundscapes. 
-This preview mode can be turned off by clicking or tapping the camera view, but it
-can also be toggled by using the "AI" checkbox. The main reason for having this "AI"
-checkbox alternative is that stand-alone installed web apps cannot read URL query 
-parameters because there is no address bar, but they can respond to checkboxes.
-Despite the "AI" name of the checkbox it performs no AI function of its own but 
-merely offers a higher quality view for better interpretation by external AI models.<P>
+for interpretation and description by an AI model while at the same time hearing 
+The vOICe soundscapes, such that you get the best of both worlds. You need to give
+the AI model permission to share and stream the entire screen and permission to use
+the microphone. You can then give the AI model spoken instructions such as 
+"describe the view", and it will respond in a few seconds. Note that large AI models 
+typically run in the cloud and therefore fail when there is no Internet connection, 
+whereas The vOICe web app continues without any Internet connection. In the future, 
+suitable AI scene description models may become available for offline use).
+The preview mode can be turned off by clicking or tapping the camera view, but it can 
+also be toggled by using the "AI" checkbox. The main reason for having this "AI" checkbox 
+alternative is that stand-alone installed web apps cannot read URL query parameters 
+because there is no address bar, but they can respond to checkboxes. Despite the "AI" 
+name of the checkbox it performs no AI function of its own but merely offers a higher 
+quality view for better interpretation by external AI models.<P>
 
 Beware that query parameters are case sensitive.<BR>
 
@@ -209,8 +217,9 @@ orientation and the web app should follow that orientation.<p>
 
 <u><em>Visual scanline</em></u>:
 If the soundscapes appear choppy, it may help to uncheck the scanline checkbox, in 
-order to maximize performance and minimize audible artifacts. The scanline is automatically
-turned off when the fast scan rate is selected.<P>
+order to maximize performance and minimize audible artifacts. The moving scanline is 
+automatically turned off when the fast scan rate is selected or when the full-screen
+preview mode for AI models is active.<P>
 
 <u><em>Apple iPhone and iPad</em></u>:
 The vOICe web app requires iOS 11 or later. Moreover, it may appear muted until you
@@ -306,8 +315,10 @@ You may freely and without cost apply The vOICe web app for personal or academic
 You will not charge a fee or request donations for The vOICe web app, nor distribute 
 or include The vOICe web app in or with commercial products, nor modify or reverse 
 engineer The vOICe web app. You will not use The vOICe web app for commercial 
-purposes.
-
+purposes. You may save and privately store a local zipped copy of The vOICe web app 
+<A HREF="/webapp.zip" TITLE="Zipped copy of The vOICe web app">webapp.zip</A>
+to ensure that in case of political turmoil it can be revived at a later stage even
+if all its websites or even the whole Internet Archive would go down.
 <P><A NAME="dis_claim"></A>
 <font size=1><b>
 
@@ -344,13 +355,13 @@ does not store or transmit any video or snapshots; it converts live video frames
 and next discards both the video data and the generated sound data.
 
 The vOICe web app is intended for educational uses, while its effectiveness
-or benefit has not been independently demonstrated and formally validated. It is not
-intended to diagnose, treat, cure, or prevent any disease or condition. It does not
-replace long cane and/or guide dog. Depending on national law and regulations, usage of 
-The vOICe technology may be subject to approval by an institutional review board. Also,
-as with any audio-based system, permanent hearing loss may result when sounds are played
-at high volume (> 80 dB, OSHA) for prolonged periods of time, while environmental sounds 
-can be partially masked even at a modest volume.
+or benefit has not been independently demonstrated and formally validated. It is not 
+intended to diagnose, treat, cure, or prevent any disease or condition. It does not 
+replace long cane, guide dog and/or human assistance. Depending on national law and 
+regulations, usage of The vOICe technology may be subject to approval by an institutional 
+review board. Also, as with any audio-based system, permanent hearing loss may result 
+when sounds are played at high volume (> 80 dB, OSHA) for prolonged periods of time, 
+while environmental sounds can be partially masked even at a modest volume. 
 Also note that this is still a research project, while the software may contain bugs, so 
 there has to be a <A HREF="#dis_claim">disclaimer</A> with respect to any damages or harm 
 that use of this educational software might cause through inappropriate use, just like you 
