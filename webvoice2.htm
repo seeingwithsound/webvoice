@@ -113,9 +113,9 @@ view, because most browsers require user interaction to enable full-screen viewi
 In case you have multiple cameras, it is also possible to select another camera
 at startup using query parameters like "camera=1" or "camera=2" (the default camera 
 being "camera=0"). Other query parameters are "mute", "edges", "negative", "zoom",
-"mono", "volume", "viewport" and "preview". The "volume" query parameter sets the 
-audio volume for soundscapes and speech through an integer in the range between 
-0 and 100 (default is 100). For example,<P>
+"mono", "volume", "viewport", "preview", "xres" and "yres". The "volume" query 
+parameter sets the audio volume for soundscapes and speech through an integer in 
+the range between 0 and 100 (default is 100). For example,<P>
 
 <xmp>   https://www.seeingwithsound.com/webvoice/webvoice.htm?volume=25</xmp><P>
 <!-- "torch" implemented but does not seem to work as query parameter, and 
@@ -160,6 +160,18 @@ alternative is that stand-alone installed web apps cannot read URL query paramet
 because there is no address bar, but they can respond to checkboxes. Despite the "AI" 
 name of the checkbox it performs no AI function of its own but merely offers a higher 
 quality view for better interpretation by external AI models.<P>
+
+The AI compatibility mode can also be used to let brain implant software capture 
+The vOICe web app screen in high resolution color mode for sounding The vOICe 
+soundscapes while at the same time imposing a corresponding phosphene view in the
+visual cortex, for hybrid use of a brain implant (usually edges-only for safety
+reasons in direct brain stimulation with an invasive BCI) and visual-to-auditory
+sensory substitution (including smooth surfaces and textures). The capture resolution
+is by default 320 x 240 pixels (if supported by the camera), but can be set to a 
+higher resolution using the xres and yres query parameters (up to 1200 x 800 pixels),
+as in
+
+<xmp>   https://www.seeingwithsound.com/webvoice/webvoice.htm?preview&xres=1200&yres=800</xmp><P>
 
 Beware that query parameters are case sensitive.<BR>
 
