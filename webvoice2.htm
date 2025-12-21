@@ -113,9 +113,9 @@ view, because most browsers require user interaction to enable full-screen viewi
 In case you have multiple cameras, it is also possible to select another camera
 at startup using query parameters like "camera=1" or "camera=2" (the default camera 
 being "camera=0"). Other query parameters are "mute", "edges", "negative", "zoom",
-"mono", "volume", "viewport", "preview", "xres" and "yres". The "volume" query 
-parameter sets the audio volume for soundscapes and speech through an integer in 
-the range between 0 and 100 (default is 100). For example,<P>
+"mono", "volume", "viewport", "preview", "previewfps", "xres" and "yres". The "volume"
+query parameter sets the audio volume for soundscapes and speech through an integer
+in the range between 0 and 100 (default is 100). For example,<P>
 
 <xmp>   https://www.seeingwithsound.com/webvoice/webvoice.htm?volume=25</xmp><P>
 <!-- "torch" implemented but does not seem to work as query parameter, and 
@@ -172,6 +172,9 @@ higher resolution using the xres and yres query parameters (up to 1200 x 800 pix
 as in
 
 <xmp>   https://www.seeingwithsound.com/webvoice/webvoice.htm?preview&xres=1200&yres=800</xmp><P>
+
+The "previewfps" preview frame rate query parameter can similarly be set to a value 
+between 1 and 30 frames per second (default is 10 fps).<P>
 
 Beware that query parameters are case sensitive.<BR>
 
