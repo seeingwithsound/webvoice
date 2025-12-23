@@ -27,7 +27,8 @@
 <META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0" />
 <SCRIPT>
 <!--
-document.write("<LINK HREF='"+location.href.substring(location.href.lastIndexOf("/")+1,location.href.lastIndexOf(".")+1)+"css' REL='stylesheet' TYPE='text/css'/>");
+var s0 = location.href.substring(location.href.lastIndexOf("/")+1);
+var s1 = s0.substring(0,s0.indexOf(".")+1);
 // Avoid race condition for loading CSS for setting background-color etc with Firefox on Android?
 // var getcss = document.createElement("getcss");
 // getcss.innerHTML = "<LINK HREF='"+location.href.substring(location.href.lastIndexOf("/")+1,location.href.lastIndexOf(".")+1)+"css' REL='stylesheet' TYPE='text/css'/>";
@@ -38,6 +39,7 @@ var viewdigits = 4;  // 2
 //console.log(info.quota);
 //console.log(info.usage);
 //});
+document.write("<LINK HREF='"+s1+"css' REL='stylesheet' TYPE='text/css'/>");
 function updateDiv() {
    if (!document.getElementById('cacheDiv') || !cacheVersion) setTimeout(function() {
       var existDiv1 = document.getElementById('cacheDiv');  // Deal with race condition (div may not exist yet)
@@ -117,13 +119,9 @@ if (rc(".jp/")) xjp = true;
 if (rc(".fr/")) xfr = true;
 if (rc(".de/")) xde = true;
 if (rc(".nl/")) xnl = true;
-function getQueryString(name, url) {
-   if (!url) url = window.location.href;
-   name = name.replace(/[\[\]]/g, '\\$&');
-   var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'), results = regex.exec(url);
-   if (!results) return null;
-   if (!results[2]) return '';
-   return decodeURIComponent(results[2].replace(/\+/g, ' '));
+function getQueryString(name, urlParams) {
+   if (!urlParams) urlParams = new URLSearchParams(window.location.search);
+   return urlParams.get(name);
 }
 hl = getQueryString("hl"); 
 if (hl != null) { 
@@ -160,6 +158,11 @@ var vp = getQueryString("viewport");
 if (vp != null) qviewport = parseInt(vp);
 if (qviewport < 10) qviewport = 10;
 if (qviewport > 100) qviewport = 100;
+var qcontrast = 2;
+var ct = getQueryString("contrast");
+if (ct != null) qcontrast = parseFloat(ct);
+if (qcontrast < 0) qcontrast = 0;
+if (qcontrast > 5) qcontrast = 5;
 var qxres = 320;
 var xres = getQueryString("xres");
 if (xres != null) qxres = parseInt(xres);
