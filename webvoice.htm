@@ -141,6 +141,7 @@ var qnegative    = (getQueryString("negative") != null);
 var qzoom        = (getQueryString("zoom") != null);
 var qmono        = (getQueryString("mono") != null);
 var qtorch       = (getQueryString("torch") != null);
+var qR2L         = (getQueryString("r2l") != null);
 var qcataracts   = (getQueryString("cataracts") != null);
 var qhemianopiaL = (getQueryString("hemianopia") != null || getQueryString("hemianopiaL") != null);
 var qhemianopiaR = (getQueryString("hemianopiaR") != null);
@@ -256,6 +257,7 @@ runs inside your browser</H3></Center><P>
 <div hidden accesskey="-" onclick="qvolume=(qvolume>10?qvolume-10:10);document.getElementById('gxStatus').innerHTML='<P>&#128266; '+qvolume+'</P>'"></div>
 <div id="gxStatus"></div>
 <div hidden accesskey="p" onclick="qpreview=!qpreview"></div>
+<div hidden accesskey="l" onclick="qR2L=!qR2L"></div>
 
 <SCRIPT>
 <!--

@@ -12,8 +12,8 @@
 <TITLE>Usage notes</TITLE>
 <style><!--a:active{color:7f007f} a:hover{color:ff0000}--></style>
 </HEAD>
-<!--<BODY BGCOLOR="#000000" TEXT="#ffffff" LINK="#ffff00" VLINK="#ffff00" ALINK="#ff0000">-->
-<BODY BGCOLOR="#FFFFFF" BACKGROUND="bgvoice.gif" TEXT="#000000" LINK="#0000ff" VLINK="#7f007f" ALINK="#ff0000">
+<!--<BODY onload="onloadBody();" BGCOLOR="#000000" TEXT="#ffffff" LINK="#ffff00" VLINK="#ffff00" ALINK="#ff0000">-->
+<BODY onload="onloadBody();" BGCOLOR="#FFFFFF" BACKGROUND="bgvoice.gif" TEXT="#000000" LINK="#0000ff" VLINK="#7f007f" ALINK="#ff0000">
 <font face="Arial,Helvetica">
 
 <Center><H1>Usage notes</H1></Center>
@@ -113,7 +113,9 @@ view, because most browsers require user interaction to enable full-screen viewi
 In case you have multiple cameras, it is also possible to select another camera
 at startup using query parameters like "camera=1" or "camera=2" (the default camera 
 being "camera=0"). Other query parameters are "mute", "edges", "negative", "zoom",
-"mono", "volume", "viewport", "contrast", "preview", "previewfps", "xres" and "yres".
+"mono", "volume", "viewport", "contrast", "preview", "previewfps", "xres", "yres"
+and "r2l".<P>
+
 The "volume" query parameter sets the audio volume for soundscapes and speech through 
 an integer in the range between 0 and 100 (default is 100). For example,<P>
 
@@ -177,10 +179,14 @@ as in
 
 <xmp>   https://www.seeingwithsound.com/webvoice/webvoice.htm?preview&xres=1200&yres=800</xmp><P>
 
-The "previewfps" preview frame rate query parameter can similarly be set to a value 
-between 1 and 30 frames per second (default is 10 fps).<P>
+The "r2l" query parameter applies right-to-left scanning instead of the default
+left-to-right scanning,
 
-Beware that query parameters are case sensitive.<BR>
+<xmp>   https://www.seeingwithsound.com/webvoice/webvoice.htm?r2l</xmp><P>
+
+Right-to-left scanning can be useful when visually reading Hebrew or Arabic print.<P>
+
+Beware that all query parameters are case sensitive.<BR>
 
 <A NAME="kb_shortcuts">&#160;</A><BR>
 <b role="navigation">Keyboard shortcuts</b><P>
@@ -196,8 +202,9 @@ var akl = document.querySelector('span').accessKeyLabel;
 if (akl) document.write("(In your current browser it would be "+akl+".)");
 </script>
 In this manner there are shortcut keys 'm' for pressing the mute button, 'e' for edges, 
-'n' for negative, 'z' for zoom, 's' for mono, 't' for torch, 'r' for reset, 'p' for
-preview, and 'q' for the record button, as well as '+' for volume up and '-' for volume down.<BR>
+'n' for negative, 'z' for zoom, 's' for mono, 't' for torch, 'r' for reset, 
+'p' to toggle preview, 'l' to toggle right-to-left scanning, and 'q' for the record button, 
+as well as '+' for volume up and '-' for volume down.<BR>
 
 <A NAME="share_screen">&#160;</A><BR>
 <b role="navigation">How to consult a remote sighted guide</b><P>
@@ -397,7 +404,7 @@ hard to track down.
 </td></tr></table>
 </Center>
 
-<P><div onClick="location.href='../contact.htm';"><H6>Copyright &copy; 1996 - 2025 Peter B.L. Meijer<BR></H6></div>
+<P><div onClick="location.href='../contact.htm';"><H6>Copyright &copy; 1996 - 2026 Peter B.L. Meijer<BR></H6></div>
 </font>
 <!--<SCRIPT LANGUAGE="JavaScript" SRC="../ga.js"></SCRIPT>-->
 </BODY></HTML>
