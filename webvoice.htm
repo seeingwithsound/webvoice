@@ -4,6 +4,7 @@
 <!DOCTYPE HTML>
 <HTML>
 <HEAD>
+<META HTTP-EQUIV=Content-Type CONTENT="text/html; CHARSET=UTF-8" />
 <META NAME="mobile-web-app-capable" CONTENT="yes" />
 <META NAME="apple-mobile-web-app-capable" CONTENT="yes" />
 <META NAME="apple-mobile-web-app-status-bar-style" CONTENT="black" />
@@ -15,7 +16,6 @@
 <LINK REL="apple-touch-icon" SIZES="144x144" HREF="logo_144.png" />
 <LINK REL="apple-touch-icon" SIZES="180x180" HREF="logo_180.png" />
 <LINK REL="manifest" HREF="manifest.json" />
-<META HTTP-EQUIV=Content-Type CONTENT="text/html; CHARSET=UTF-8" />
 <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, no-store, must-revalidate" />
 <META HTTP-EQUIV="Pragma" CONTENT="no-cache" />
 <META HTTP-EQUIV="Expires" CONTENT="0" />
@@ -34,23 +34,23 @@ var s1 = s0.substring(0,s0.indexOf(".")+1);
 // getcss.innerHTML = "<LINK HREF='"+location.href.substring(location.href.lastIndexOf("/")+1,location.href.lastIndexOf(".")+1)+"css' REL='stylesheet' TYPE='text/css'/>";
 // document.head.appendChild(getcss);
 var cacheVersion = null;
-var viewdigits = 4;  // 2
+var viewdigits = 4;  // 5, 4, 2
 //navigator.storage.estimate().then(function(info) { 
 //console.log(info.quota);
 //console.log(info.usage);
 //});
 document.write("<LINK HREF='"+s1+"css' REL='stylesheet' TYPE='text/css'/>");
 function updateDiv() {
-   if (!document.getElementById('cacheDiv') || !cacheVersion) setTimeout(function() {
-      var existDiv1 = document.getElementById('cacheDiv');  // Deal with race condition (div may not exist yet)
+   if (!document.getElementById('unknownSpan') || !cacheVersion) setTimeout(function() {
+      var existDiv1 = document.getElementById('unknownSpan');  // Deal with race condition (div may not exist yet)
       if (existDiv1 && cacheVersion) existDiv1.innerHTML = cacheVersion.substring(0,cacheVersion.indexOf('.')+1+viewdigits);
       else setTimeout(function() {  // Try again after another delay
-         var existDiv2 = document.getElementById('cacheDiv');
+         var existDiv2 = document.getElementById('unknownSpan');
          if (existDiv2 && cacheVersion) existDiv2.innerHTML = cacheVersion.substring(0,cacheVersion.indexOf('.')+1+viewdigits);
       }, 3000);
    }, 2000);
    else {
-      var existDiv0 = document.getElementById('cacheDiv');
+      var existDiv0 = document.getElementById('unknownSpan');  // cacheDiv
       if (existDiv0 && cacheVersion) existDiv0.innerHTML = cacheVersion.substring(0,cacheVersion.indexOf('.')+1+viewdigits);
    }
 }
@@ -59,7 +59,9 @@ if ('serviceWorker' in navigator) {
 // window.addEventListener('load', function() {  // Wait with registration until page has loaded and cacheDiv exists
    navigator.serviceWorker.register('./sw.js')
    .then(function(reg) {
-      console.log('Service worker registered. Scope is ' + reg.scope);
+      console.log('SW registered. Scope is ' + reg.scope);
+   // console.log('The vOICe web app version '+cacheVersion);  // cacheVersion is null
+   // updateDiv();
       navigator.serviceWorker.addEventListener('message', function(event) {
          cacheVersion = `${event.data}`;
          console.log('The vOICe web app version '+cacheVersion);
@@ -226,13 +228,13 @@ runs inside your browser</H3></Center><P>
 <form><font size=-1><span id="viewSpan">view</span>:
 <!--
 <input type="checkbox" id="gxScanline"/><label for="gxScanline">scan</label>
-<input type="checkbox" id="gxScale"/><label for="gxScale">large</label>
+<input type="checkbox" id="gxLarge"/><label for="gxLarge">large</label>
 <input type="checkbox" id="gxHDR"/><label for="gxHDR">HDR</label>
 <input type="checkbox" id="gxVR"/><label for="gxVR">VR</label>
 <input type="checkbox" id="gxAI"/><label for="gxAI">AI</label>
 -->
 <label><input type="checkbox" id="gxScanline"/>scan</label>
-<label><input type="checkbox" id="gxScale"/>large</label>
+<label><input type="checkbox" id="gxLarge"/>large</label>
 <label><input type="checkbox" id="gxHDR"/>HDR</label>
 <label><input type="checkbox" id="gxVR"/>VR</label>
 <label><input type="checkbox" id="gxAI"/>AI</label>
